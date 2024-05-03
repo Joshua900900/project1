@@ -1,0 +1,49 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to a Simple App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0; /* Set background color */
+            color: #333; /* Set text color */
+        }
+        h2 {
+            color: #007bff; /* Set heading color */
+        }
+        p {
+            margin-bottom: 20px; /* Add space below paragraphs */
+        }
+        ul {
+            list-style-type: disc;
+            color: #666;
+            padding-left: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome to a Simple App</h2>
+    <p>This is a simple web application created by Joshua Williams for COMP314. The application is designed to demonstrate various web development concepts and techniques.</p>
+    
+    <h3>Features:</h3>
+    <ul>
+        <li>Take a personalized quiz</li>
+        <li>And more...</li>
+    </ul>
+    
+    <p>Feel free to explore the app and try out its features! (There's only one)</p>
+    <a href="{% url 'product_list' %}" class="button">Go to ID Quiz</a>
+</body>

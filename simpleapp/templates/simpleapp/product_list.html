@@ -1,0 +1,77 @@
+<style>
+    div {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background-color: #f0f0f0; /* Set background color */
+        color: #333; /* Set text color */
+    }
+    h2 {
+        color: #007bff; /* Set heading color */
+    }
+    p {
+        margin-bottom: 20px; /* Add space below paragraphs */
+    }
+    ul {
+        list-style-type: disc;
+        color: #666;
+        padding-left: 20px;
+    }
+    .button {
+        display: inline-block;
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .form-row label {
+        flex: 1; /* Distribute available space equally among labels */
+        margin-right: 10px; /* Add spacing between labels and input fields */
+    }
+    .form-row input,
+    .form-row select {
+        flex: 2;
+    }
+
+</style>
+<h2>Idenfication Quiz</h2>
+<form action="{% url 'welcome_page' %}" method="GET">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    </div>
+    <div>
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+    </div>
+    <div>
+        <button type="button" onclick="goBack()" class="button">Go Back</button>
+        <button type="submit" onclick="SubmitEvent()" class="button">Submit</button>
+    </div>
+</form>
+<script>
+    function goBack() {
+      window.history.go(-1);
+    }
+    </script>
